@@ -26,6 +26,12 @@ public class UserService {
 		    else {return false;} 
 		
 	}
+
+	public boolean saveUser(UserEntity user) {
+		  UserEntity res =userRepo.save(user);
+		  if(res!=null) {return true;}
+		  else {return false;}
+	}
 	
 	
 	
